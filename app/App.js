@@ -5,6 +5,7 @@ import { LoginScreen } from './src/views/Login';
 import { NativeBaseProvider} from "native-base";
 import { SignInScreen } from './src/views/SignIn';
 import { DashboardScreen } from './src/views/Dashboard';
+import { AgendamentosScreen } from './src/views/Agendamentos';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ function App() {
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Registro" component={SignInScreen} />
           <Stack.Screen name="Dashboard" component={DashboardScreen} />
+          <Stack.Screen name="Agendamentos" component={AgendamentosScreen} />
        </Stack.Navigator>
      </NavigationContainer>
     </NativeBaseProvider>

@@ -1,6 +1,6 @@
 import { NativeBaseProvider, Box, VStack, FormControl, Input, Button, Center, Heading, Link, HStack, Text } from "native-base";
 import { useState } from "react";
-import { handleLogin } from "../controller/loginController";
+import { handleLogin } from "../controller/generalController";
 
 export function SignInScreen({navigation}) {
     const [email, setEmail] = useState('');

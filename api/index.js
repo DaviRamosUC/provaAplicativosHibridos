@@ -52,6 +52,8 @@ app.post('/login', async (req, res) => {
 
 // Middleware de autenticação
 function auth(req, res, next) {
+    console.log(req)
+
     const token = req.headers.authorization.split(' ')[1];
     if (!token) return res.status(401).json({ error: 'Token não fornecido.' });
     jwt.verify(token, 'secret', (err, decoded) => {
@@ -104,6 +106,7 @@ app.post('/agendamentos', auth, async (req, res) => {
 
 // Rota para listar profissionais
 app.get('/profissionais', auth, async (req, res) => {
+    console.log(req)
     const profissionais = await Usuario.find({ tipo: 2 }, 'nome'); // Seleciona apenas o nome
     res.json(profissionais);
 });
